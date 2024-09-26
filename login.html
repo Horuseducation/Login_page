@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<style>
+    .login_form{
+        background-color: rgb(241, 241, 241);
+        display: grid;
+        align-items: center;
+        justify-content: space-around;
+        justify-items: stretch;
+    }
+    #login_btn{
+        background-color: rgb(114, 215, 255);
+        border: 2px solid black;
+        border-radius: 6px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 21px;
+        color: black;
+        display: block;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        cursor: pointer;
+    }
+    .login_page{
+        display:none;     
+    }
+    .log_body{
+        background-color: rgb(235, 235, 235);
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        align-items: center
+    }
+    #user_img{
+        width: 10%;
+    }
+</style>
+<body>
+    <div class="login_form">
+        <h1>Login Page</h1>
+        <div class="log_btn">
+            <button class="login_btn" id="login_btn" onclick="disp()">Login</button>
+        </div>
+    </div>
+
+    <!--Login page-->
+<div class="login_page" id="log_page">
+    <div class="log_body">
+            <img src="user.png" alt="user_img" id="user_img">
+        <div class="input_area">
+            <p style="font-weight: bold; font-family: 'Courier New', Courier, monospace;color: black;">Username:</p>
+            <input type="text" placeholder="Username" name="Password" id="user" style="width: 100%; height:30px; border: 2px solid rgb(114, 215, 255); border-radius: 10px;">
+            <p style="font-weight: bold; font-family: 'Courier New', Courier, monospace;color: black;">Password</p>
+            <input type="text" name="Password" id="pass" placeholder="password" style="width: 100%; height:30px; border: 2px solid rgb(114, 215, 255); border-radius: 10px;">
+            <br><br><button style="font-weight: bold; font-family: 'Courier New', Courier, monospace;color: black;  background-color: rgb(114, 215, 255); border: 2px solid black;border-radius: 6px; width: 120px;font-size: 21px; cursor: pointer;" onclick="Signin()">Sign in</button>
+       </div>
+    </div>
+</div>
+</body>
+<script>
+    function disp(){
+        let page = document.getElementById("log_page")
+        page.classList.toggle("login_page");
+
+    }
+</script>
+</html>
